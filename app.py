@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 # Função para buscar a letra da música
 def buscar_letra(banda, musica):
-    access_token = "dPuGlgSV5UG_u8rZdMAFfBZq0V9q5CSYe6VBprED6sWTNPugVZx34SsPceJPINpO"
+    access_token = "dPuGlgSV5UG_u8rZdMAFfBZq0V9q5CSYe6VBprED6sWTNPugVZx34SsPceJPINpO" # Minha chave pessoal criada no site Ginius.
     headers = {"Authorization": f"Bearer {access_token}"}
     query = f"{banda} {musica}"  # Monta a consulta de busca
     endpoint = f"https://api.genius.com/search?q={query}"
