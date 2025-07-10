@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 # Função para buscar a letra da música
 def buscar_letra(banda, musica):
-    access_token = "dPuGlgSV5UG_u8rZdMAFfBZq0V9q5CSYe6VBprED6sWTNPugVZx34SsPceJPINpO"  # Substitua pelo seu token da Genius
+    access_token = "dPuGlgSV5UG_u8rZdMAFfBZq0V9q5CSYe6VBprED6sWTNPugVZx34SsPceJPINpO"
     headers = {"Authorization": f"Bearer {access_token}"}
     query = f"{banda} {musica}"  # Monta a consulta de busca
     endpoint = f"https://api.genius.com/search?q={query}"
@@ -31,7 +31,7 @@ def buscar_letra(banda, musica):
         lyrics += div.get_text(separator="\n")
     return lyrics.strip()  # Retorna a letra limpa
 
-# Exibe uma imagem no topo do app (pode ser local ou da internet)
+# Exibe uma imagem no topo do app
 st.image("C:/Users/tayga/Downloads/banda.jpeg", width=300)
 
 # Título do app
